@@ -37,7 +37,7 @@ _Pongo . aunque no necesito build context ya que el Dockerfile no utiliza recurs
 
 docker container run -d --name phpinfo --entrypoint ${ENTRYPOINT} --restart always -p 8080:8080 ${IMAGE} ${CMD}
 
-docker container run -d --name phpinfo --entrypoint /usr/bin/php --restart always -p 8080 phpinfo:0.0.1 -f src/index.php -S 0.0.0.0:8080
+docker container run -d --name phpinfo --entrypoint /usr/bin/php --restart always -p 8080 phpinfo:0.0.2 -f src/index.php -S 0.0.0.0:8080
 
 ## Test
 
