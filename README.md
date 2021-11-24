@@ -46,3 +46,10 @@ curl localhost:8080/src/index.php
 ## Borrar contenedor
 
 docker container rm -f phpinfo -v
+
+## Run as Docker container con workdir
+
+docker container run -d --name phpinfo --entrypoint /usr/bin/php --restart always -v ${PWD}/src/index.php:/src/index.php:ro -p 8080 -u nobody -w /src/ phpinfo:0.0.1 -f src/index.php -S 0.0.0.0:8080
+
+curl localhost:8080/index.php
+
