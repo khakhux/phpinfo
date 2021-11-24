@@ -30,3 +30,7 @@ docker container run -d --name phpinfo --entrypoint /usr/bin/php --restart alway
 ## Test
 
 curl localhost:8080/src/index.php
+
+## Borrar contenedor
+
+docker container rm -f phpinfo -v
